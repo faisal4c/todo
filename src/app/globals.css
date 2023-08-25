@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::spelling-error {
+    text-decoration:none;
+}
+
 body{
     background:#1a1a1d;
 }

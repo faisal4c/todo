@@ -16,7 +16,6 @@ export default function todoComponent() {
     setRelationArray((oldVal)=>{
         return [{originalText:newTodo,relArray:[]},...oldVal];
     })
-    console.log(relationArray);
   }
 
   const handleChange=(e)=>{

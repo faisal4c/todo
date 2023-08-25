@@ -10,11 +10,9 @@ export default function InputComponent({idx}) {
 
 
   useEffect(()=>{
-    console.log(textArray[idx]);
     const input=document.querySelector(`.innerClass${idx}`);
     input.innerText=textArray[idx];
     if(relationArray[idx].relArray.length!=0){
-      console.log('relation array present');
       let newStr='';
       for(let i=0;i<relationArray[idx].relArray.length;i++){
         newStr+='<>'+relationArray[idx].relArray[i];
@@ -65,7 +63,6 @@ export default function InputComponent({idx}) {
       }
 
       if(lastAngularBracketIdx!=-1){
-        console.log('bracket found'+lastAngularBracketIdx);
         e.target.innerText=str.substr(0,lastAngularBracketIdx-1);
         setRelationArray((oldVal)=>{
           for(let elem of oldVal){
@@ -78,7 +75,6 @@ export default function InputComponent({idx}) {
       }
     }
     else{
-      console.log(str);
       const l=str.length;
   
       if(str.indexOf('<')!=-1){
@@ -97,7 +93,7 @@ export default function InputComponent({idx}) {
       {
           showSuggestion==1?
           textArray.map((elem,currIdx)=>
-            <p onClick={handleSuggestionClick}>{elem}</p>
+            <p key={currIdx} onClick={handleSuggestionClick}>{elem}</p>
           )
           :
           <div></div>

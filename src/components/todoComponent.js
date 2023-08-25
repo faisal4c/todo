@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import InputComponent from "../components/inputComponent";
 import {TextArrayContext} from "../providers/textArrayProvider";
 
-export default function todoComponent() {
+export default function TodoComponent() {
   const {textArray,setTextArray,relationArray,setRelationArray}=useContext(TextArrayContext);
   const [newTodo,setNewToDo]=useState('');
 

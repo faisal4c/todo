@@ -37,7 +37,7 @@ export default function todoComponent() {
     
       <form  className="todo-items">
         {
-            textArray.map((elem,idx)=>(
+            relationArray.map((elem,idx)=>(
                 <InputComponent key={idx} idx={idx}/>
             ))
         }
